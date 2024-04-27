@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.game-container {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+#checkers-board {
+    display: grid;
+    grid-template-columns: repeat(8, 80px); /* Увеличен размер клеток */
+    grid-template-rows: repeat(8, 80px); /* Увеличен размер клеток */
+    margin: 20px;
+}
+
+.cell {
+    width: 80px; /* Увеличен размер клеток */
+    height: 80px; /* Увеличен размер клеток */
+}
+
+.black-cell, .white-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checker {
+    width: 60px; /* Увеличен размер шашек */
+    height: 60px; /* Увеличен размер шашек */
+    border-radius: 50%; /* Делаем шашки круглыми */
+}
+
+.black-cell {
+    background-color: gray;
+}
+
+.white-cell {
+    background-color: white;
+}
+
+.mode-selection {
+    display: flex;
+    flex-direction: column;
+}
+
+.mode-button {
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 300px; /* Установлен фиксированный размер для кнопок */
+    position: relative;
+    left: 60px;
+    top: 40px;
+}
+
+.mode-button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+#mode {
+  text-align: center;
+  width: 300px; /* Установлен фиксированный размер для кнопок */
+  position: relative;
+  left: 60px;
+  top: 40px;
+}
+
+.profile {
+  position: absolute;
+  left: 93%;
+  top: 3%;
+}
+
+.chat-container {
+    width: 390px;
+    height: 400px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    left: 30px;
+    bottom: 60px;
+    background: white;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+#chat-form {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+#message-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.chat-button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.chat-name {
+  position: absolute;
+  font-size: 30px;
+  text-align: center;
+  width: 390px;
+  top: -40px;
+}
+
+.leaderboard {
+    width: 350px;
+    height: 350px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    background: #fff;
+    position: absolute;
+    left: 30px;
+    top: 10px;
+}
+
+.leaderboard h2 {
+    text-align: center;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}

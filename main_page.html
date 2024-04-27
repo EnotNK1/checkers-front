@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Игра в шашки онлайн</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="leaderboard">
+      <h2>Таблица лидеров</h2>
+      <table id="leaderboard-table">
+          <thead>
+              <tr>
+                  <th>Место</th>
+                  <th>Ник</th>
+                  <th>Рейтинг</th>
+              </tr>
+          </thead>
+          <tbody>
+              <!-- Здесь будут строки с информацией о пользователях -->
+          </tbody>
+      </table>
+    </div>
+    <div class="chat-container">
+      <div class="chat-name">Чат</div>
+      <div class="chat-messages" id="chat-messages"></div>
+      <form id="chat-form">
+          <input type="text" id="message-input" placeholder="Введите сообщение..." autocomplete="off">
+          <button id="chat-button" type="submit">Отправить</button>
+      </form>
+    </div>
+    <div class="game-container">
+        <div id="checkers-board"></div>
+        <div class="mode-selection">
+            <h1 id="mode">Режимы</h1>
+            <button class="mode-button">КЛАССИЧЕСКИЙ</button>
+            <button class="mode-button">БЛИЦ</button>
+            <button class="mode-button">ПОДДАВКИ</button>
+            <button class="mode-button">ДИАГОНАЛЬ</button>
+            <button class="mode-button">АНГЛИЙСКИЕ</button>
+        </div>
+        <div class="profile">
+          <button>Профиль</button>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

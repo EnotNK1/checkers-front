@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <form action="/submit_login" method="POST">
+        <h2>Авторизация</h2>
+        <div>
+            <label for="email">Электронная почта:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div>
+            <button type="button" onclick="location.href='main_page.html';">Войти</button>
+        </div>
+        <div>
+            <button type="button" class="link-button" onclick="location.href='register.html';">Регистрация</button>
+        </div>
+    </form>
+</body>
+</html>
