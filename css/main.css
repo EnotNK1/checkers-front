@@ -162,3 +162,11 @@ th {
 tr:hover {
     background-color: #f5f5f5;
 }
+
+.possible-move {
+    background-color: #6ff0a6; /* Измените на любой цвет, который вам нравится */
+}
+
+.selected {
+    background-color: #6ff0a6; /* Измените на любой цвет, который вам нравится */
+}
