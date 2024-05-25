@@ -57,23 +57,3 @@ button.link-button {
 button.link-button:hover {
     background-color: #545b62; /* Темно-серый цвет при наведении */
 }
-
-#checkers-board {
-    display: grid;
-    grid-template-columns: repeat(8, 50px);
-    grid-template-rows: repeat(8, 50px);
-    border: 3px solid black;
-}
-
-.cell {
-    width: 50px;
-    height: 50px;
-}
-
-.black-cell {
-    background-color: gray;
-}
-
-.white-cell {
-    background-color: white;
-}
