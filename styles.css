@@ -134,7 +134,7 @@ tr:hover {
     color: #fff;
 }
 
-.mode-button {
+.mode-button, #reset-game-button {
     padding: 10px;
     margin-bottom: 10px;
     cursor: pointer;

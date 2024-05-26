@@ -6,6 +6,11 @@ const BLACK = 'var(--black-cell)';
 const WHITE = 'var(--white-cell)';
 const ACTIVE = 'board__cell board__cell--active';
 const PASSIVE = 'board__cell board__cell--passive';
+const resetGameButton = document.getElementById('reset-game-button');
+
+resetGameButton.addEventListener('click', () => {
+  resetGame();
+});
 
 let board = [];
 let selectedCells = [];
