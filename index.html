@@ -55,5 +55,35 @@
 
     </div>
     <script src="./script.js"></script>
+    <script>
+      // Получаем элементы формы и чата
+      const chatForm = document.getElementById("chat-form");
+      const messageInput = document.getElementById("message-input");
+      const chatMessages = document.getElementById("chat-messages");
+
+      // Обработчик отправки формы
+      chatForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        // Получаем введенное сообщение
+        const message = messageInput.value;
+
+        // Проверяем, что введено сообщение
+        if (!message) {
+          return;
+        }
+
+        // Создаем новый элемент сообщения
+        const messageElement = document.createElement("div");
+        messageElement.classList.add("chat-message");
+        messageElement.textContent = message;
+
+        // Добавляем сообщение в чат
+        chatMessages.appendChild(messageElement);
+
+        // Очищаем поле ввода
+        messageInput.value = "";
+      });
+    </script>
 </body>
 </html>

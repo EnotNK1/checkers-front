@@ -17,11 +17,50 @@
             <input type="password" id="password" name="password" required>
         </div>
         <div>
-            <button type="button" onclick="location.href='index.html';">Войти</button>
+            <button type="submit">Войти</button>
         </div>
         <div>
             <button type="button" class="link-button" onclick="location.href='register.html';">Регистрация</button>
         </div>
     </form>
+    <script>
+        const form = document.querySelector('form');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            const data = {
+                email,
+                password
+            };
+
+            try {
+                const response = await fetch('http://127.0.0.1:8000/users/auth', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (result === 'Successfully') {
+                    alert('Авторизация прошла успешно');
+                    window.location.href = "index.html"
+                } else {
+                    alert(result);
+                }
+            }
+            catch (error) {
+                alert("Hello world")
+                console.error(error);
+                alert('Произошла ошибка. Попробуйте еще раз.');
+            }
+        });
+    </script>
 </body>
 </html>

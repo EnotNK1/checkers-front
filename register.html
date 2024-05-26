@@ -68,11 +68,12 @@
 
                 if (result === 'Successfully') {
                     alert('Регистрация прошла успешно');
-                    window.location.href = '/';
+                    window.location.href = "index.html"
                 } else {
                     alert(result);
                 }
             } catch (error) {
+                alert("Hello world")
                 console.error(error);
                 alert('Произошла ошибка. Попробуйте еще раз.');
             }
