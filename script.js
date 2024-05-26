@@ -7,6 +7,7 @@ const WHITE = 'var(--white-cell)';
 const ACTIVE = 'board__cell board__cell--active';
 const PASSIVE = 'board__cell board__cell--passive';
 const resetGameButton = document.getElementById('reset-game-button');
+const win_message = document.getElementById('mode');
 
 resetGameButton.addEventListener('click', () => {
   resetGame();
@@ -260,6 +261,27 @@ function showCaptures(root, isQuenn=false, back='') {
 	}
 }
 
+function GetWin() {
+	let w1 = 0;
+	let w2 = 0;
+	for (let i = 0; i < 8; i++) {
+		for (let j = 0; j < 8; j++) {
+			const cell = {x: j, y: i};
+			if (getColor(cell) == PLAYER_TWO) {
+				w2 = w2 + 1;
+			} 
+			if (getColor(cell) == PLAYER_ONE) {
+				w1 = w1 + 1;
+			} 
+		}
+	}
+	if (w1 == 0) {
+		alert("Победа красных");
+	} else if (w2 == 0) {
+		alert("Победа голубых");
+	}
+}
+
 function switchPlayer() {
 	hideSelected();
 	[player, opponent] = [opponent, player];
@@ -296,6 +318,8 @@ function switchPlayer() {
 			} else board[i][j].className = PASSIVE;
 		}
 	}
+
+	GetWin();
 }
 
 function resetGame() {
@@ -308,6 +332,13 @@ function resetGame() {
 			else if (i > 4) color = PLAYER_ONE;
 			else 			color = BLACK;
 			paint(cell, color);
+		}
+	}
+
+	for (let i = 0; i < 8; i++) {
+		for (let j = 0; j < 8; j++) {
+			const cell = {x: j, y: i};
+			board[cell.y][cell.x].style.border = ''
 		}
 	}
 	switchPlayer();
